@@ -1,0 +1,14 @@
+•	To select all columns from a table (Customers) for rows where the Last_Name column has Smith for its value, you would send this SELECT
+ statement to the server back end:
+  SELECT * FROM Customers WHERE Last_Name='Smith';
+The server back end would reply with a result set similar to this:
+ 
+ 
+  3 rows in set (0.05 sec)
+•	To return only the Cust_No and First_Name columns, based on the same criteria as above, use this statement:
+  SELECT Cust_No, First_Name FROM Customers WHERE Last_Name='Smith';
+The subsequent result set might look like:
+
+  3 rows in set (0.05 sec)
+To make a WHERE clause find inexact matches, add the pattern-matching operator LIKE. The LIKE operator uses the % (percent symbol) wild card to match 
+zero or more characters, and the underscore (_) wild card to match exactly one character. For example:
